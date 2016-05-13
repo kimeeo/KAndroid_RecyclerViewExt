@@ -1,6 +1,7 @@
 package com.kimeeo.kAndroid.recyclerViewExt.fastScroll;
 
 import android.os.Bundle;
+import android.support.annotation.LayoutRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +15,13 @@ import com.kimeeo.kAndroid.recyclerViewExt.R;
 abstract public class FastScrollResponsiveView extends ResponsiveView
 {
     @Override
-    protected View createRootView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        if(getDataProvider().getRefreshEnabled())
-            return inflater.inflate(R.layout._fragment_recycler_fast_scroll_with_swipe_refresh_layout, container, false);
-        else
-            return inflater.inflate(R.layout._fragment_recycler_fast_scroll, container, false);
+    @LayoutRes
+    protected int getRootRefreshLayoutResID() {
+        return R.layout._fragment_recycler_fast_scroll_with_swipe_refresh_layout;
+    }
+    @Override
+    @LayoutRes
+    protected int getRootLayoutResID() {
+        return R.layout._fragment_recycler_fast_scroll;
     }
 }
