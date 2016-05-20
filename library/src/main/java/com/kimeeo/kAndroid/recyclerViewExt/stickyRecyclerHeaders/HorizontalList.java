@@ -8,9 +8,9 @@ import com.kimeeo.kAndroid.listViews.recyclerView.stickyRecyclerHeaders.DefaultS
 /**
  * Created by bhavinpadhiyar on 1/30/16.
  */
-abstract public class VerticalList extends DefaultStickyHeaderView {
+abstract public class HorizontalList extends DefaultStickyHeaderView {
     protected RecyclerView.LayoutManager createLayoutManager() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         return linearLayoutManager;
     }
 }
