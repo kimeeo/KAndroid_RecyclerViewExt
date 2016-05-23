@@ -2,14 +2,24 @@ package com.kimeeo.kAndroid.recyclerViewExt.fastScroll;
 
 import android.support.annotation.LayoutRes;
 
+import com.kimeeo.kAndroid.listViews.recyclerView.BaseRecyclerViewAdapter;
 import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.StaggeredGridView;
 import com.kimeeo.kAndroid.recyclerViewExt.R;
+import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
 /**
  * Created by bhavinpadhiyar on 1/19/16.
  */
-abstract public class FastScrollStaggeredGridView extends StaggeredGridView
+abstract public class FastScrollStaggeredGridView extends StaggeredGridView implements FastScrollRecyclerView.SectionedAdapter
 {
+    public String getSectionName(int position)
+    {
+        return getSectionLabel(position,getDataProvider().get(position));
+    }
+    protected String getSectionLabel(int position, Object o){return null;}
+    protected BaseRecyclerViewAdapter createListViewAdapter() {
+        return new DefaultSectionedAdapter(this.getDataProvider(), this,this);
+    }
     @Override
     @LayoutRes
     protected int getRootRefreshLayoutResID() {
