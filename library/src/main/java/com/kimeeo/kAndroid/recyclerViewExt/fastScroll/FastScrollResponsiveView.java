@@ -20,7 +20,7 @@ abstract public class FastScrollResponsiveView extends ResponsiveView implements
     {
         return getSectionLabel(position,getDataProvider().get(position));
     }
-    protected String getSectionLabel(int position, Object o){return null;}
+    protected String getSectionLabel(int position, Object o){return "";}
     protected BaseRecyclerViewAdapter createListViewAdapter() {
         return new DefaultSectionedAdapter(this.getDataProvider(), this,this);
     }

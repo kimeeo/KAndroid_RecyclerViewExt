@@ -16,7 +16,7 @@ abstract public class FastScrollStaggeredGridView extends StaggeredGridView impl
     {
         return getSectionLabel(position,getDataProvider().get(position));
     }
-    protected String getSectionLabel(int position, Object o){return null;}
+    protected String getSectionLabel(int position, Object o){return "";}
     protected BaseRecyclerViewAdapter createListViewAdapter() {
         return new DefaultSectionedAdapter(this.getDataProvider(), this,this);
     }
