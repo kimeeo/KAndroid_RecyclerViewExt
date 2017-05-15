@@ -2,7 +2,7 @@ package com.kimeeo.kAndroid.recyclerViewExt.fastScroll;
 
 import android.support.annotation.NonNull;
 
-import com.kimeeo.kAndroid.listViews.dataProvider.DataProvider;
+import com.kimeeo.kAndroid.dataProvider.DataProvider;
 import com.kimeeo.kAndroid.listViews.recyclerView.DefaultRecyclerViewAdapter;
 import com.kimeeo.kAndroid.listViews.recyclerView.IViewProvider;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
