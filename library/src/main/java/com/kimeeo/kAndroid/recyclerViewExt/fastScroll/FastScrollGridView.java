@@ -1,13 +1,7 @@
 package com.kimeeo.kAndroid.recyclerViewExt.fastScroll;
 
-import android.os.Bundle;
 import android.support.annotation.LayoutRes;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.kimeeo.kAndroid.listViews.recyclerView.BaseRecyclerViewAdapter;
-import com.kimeeo.kAndroid.listViews.recyclerView.DefaultRecyclerViewAdapter;
 import com.kimeeo.kAndroid.listViews.recyclerView.verticalViews.GridView;
 import com.kimeeo.kAndroid.recyclerViewExt.R;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
