@@ -18,7 +18,7 @@ abstract public class BaseStickyHeaderView extends BaseRecyclerView
         if(mAdapter instanceof StickyRecyclerHeadersAdapter)
         {
             StickyRecyclerHeadersAdapter adapter = (StickyRecyclerHeadersAdapter) mAdapter;
-            mAdapter.supportLoader = false;
+            mAdapter.setSupportLoader(false);
             final StickyRecyclerHeadersDecoration headersDecor = new StickyRecyclerHeadersDecoration(adapter);
             recyclerView.addItemDecoration(headersDecor);
             mAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
